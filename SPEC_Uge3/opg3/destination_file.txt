@@ -1,0 +1,18 @@
+customer_id,name,email,purchase_amount
+1001,John Doe,john.doe@example.com,120.00
+1002,Jane Smith,jane.smith@example.com,350.50
+1003,Emily Jones,emily.jones@example.com,400.00
+1004,Mark Brown,mark.brown@example.com
+1005,Alice Johnson,alice.johnson@example.com,150.75
+,,,
+1006,David Wilson,david.wilson@example.com,500.20
+1007,Sarah Miller,sarah.miller@example.com,340.60
+1008,James Moore,james.moore@example.com,220.10
+1009,Patricia Taylor,patricia.taylor@example.com,650,00
+,,,
+1010,Michael Anderson,michael.anderson@example.com,299,99
+1011,Linda Thomas,linda.thomas@example.com,189.50
+1012,Robert Jackson,robert.jackson@example.com,110.00
+1013,Maria Harris,maria.harris@example.com,560.45
+1014,Charles Clark,charles.clark@example.com,430.00
+1015,Jennifer Lewis,jennifer.lewis@example.com,299.95
