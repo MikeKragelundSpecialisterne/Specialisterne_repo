@@ -9,7 +9,7 @@ con = mysql.connector.connect(user="HansChristian", password="Kodeord", host="12
 cursor = con.cursor()
 
 #Analyse for salg. Først kigger vi på hvor meget hvert land har købt for. 
-cursor.execute("SELECT c.Country, SUM(od.UnitPrice * od.Quantity) AS TotalSales FROM orders o JOIN customers c ON o.CustomerID = c.CustomerID JOIN     orderdetails od ON o.OrderID = od.OrderID GROUP BY c.Country ORDER BY TotalSales DESC")
+cursor.execute("SELECT c.Country, SUM(od.UnitPrice * od.Quantity) AS TotalSales FROM orders o JOIN customers c ON o.CustomerID = c.CustomerID JOIN orderdetails od ON o.OrderID = od.OrderID GROUP BY c.Country ORDER BY TotalSales DESC")
 rowsOrders = cursor.fetchall()
 
 columns = ['Country', 'TotalSales']
