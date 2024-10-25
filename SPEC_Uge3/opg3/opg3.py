@@ -28,7 +28,7 @@ else:
         file.write(content)
         file.flush()
         file.close()
-    except (PermissionError) as e:
+    except (PermissionError, IOError) as e:
         print("Fejl i skrivning")
         sys.exit("Destinations-filen eksistere allerede og er skrivebeskyttet")
         
