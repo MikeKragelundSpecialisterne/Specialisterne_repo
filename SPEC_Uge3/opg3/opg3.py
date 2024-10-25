@@ -20,13 +20,15 @@ if not os.path.isfile(file_path):
     newfile = open(file_path, "w")
     destinationFile = open(file_path, "w")
     destinationFile.write(content)
+    destinationFile.flush()
+    destinationFile.close()
 else: 
     try:
         file = open(file_path,"w")
         file.write(content)
+        file.flush()
+        file.close()
     except (PermissionError) as e:
         print("Fejl i skrivning")
         sys.exit("Destinations-filen eksistere allerede og er skrivebeskyttet")
         
-destinationFile.flush()
-destinationFile.close()
