@@ -17,7 +17,6 @@ file_path = os.path.join(script_dir, "destination_file.txt")
 
 #If the file dosnt exists make a new. 
 if not os.path.isfile(file_path):
-    newfile = open(file_path, "w")
     destinationFile = open(file_path, "w")
     destinationFile.write(content)
     destinationFile.flush()
