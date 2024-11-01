@@ -34,6 +34,7 @@ generator = loader()
 
 #I want to have a clear view of the data, so i get a sample size of 5
 header = next(generator)
+print(header)
 sample_data = [next(generator) for _ in range(5)]
 
 # Load the sample data into a DataFrame with the filtered header
@@ -42,6 +43,12 @@ df = pd.DataFrame(sample_data, columns=header)
 # Display the DataFrame
 
 print(df)
+
+#checking for dublicates:
+df = pd.DataFrame(columns=header,data=generator)
+print(df.duplicated().sum())
+#We are getting a 0, so we are good!  
+
 
 # In the print above we can see that 1. & 3. row is unique values. 
 # 1. is a index number, which won't have relevance and the 3. is a custom description.
@@ -189,11 +196,11 @@ for column, count in empty_counts.items():
 # This will allow me to use a much more simple/fast generator, in my visualization file. 
 
 # Initialize the generator with skipped columns and fill values
-generator = loaderv2(skip_columns=[0, 2], fill_values=fill_values)
+generator = loaderv2(skip_columns=[0], fill_values=fill_values)
 header = next(generator) 
 
 # Specify the output file path - getcwd returns the current dir
-output_file_path = os.path.join(os.getcwd(), "Fitted_data.csv")
+output_file_path = os.path.join(os.getcwd(), "Fitted_data_With text.csv")
 
 # Open a new CSV file and write the processed data into it
 try:
