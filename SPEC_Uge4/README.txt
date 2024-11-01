@@ -8,7 +8,7 @@ Da data sættet var så stort, konkluderede jeg at det var smartest at filtere d
 Udover dette brugte jeg også ualmindelig lang tid på, at få memory_profiler til at fungerer.
 Åbenbart har den en hovedprocess for programmet og en child, som måler.
 
-Jeg fandt ud af at det hjalp markant på mine RAM, at jeg bruger en generator funktion til at loade testen, 
+Jeg fandt ud af at det hjalp markant på mine RAM, at jeg bruger en generator funktion til at loade teksten, 
 men det tager meget længere tid. 
-Lige til mit datasæt på ca. 2.3 gb, var det måske okay, at have det i hukommelsen, især den denne pc. 
+Til størrelsen på dette datasæt og med denne pc, kan man måske overveje at have det i hukommelsen på en gang,
 Men var datasættet større, eller min pc dårligere, kan jeg godt se logikken i at have en generator funktion. 
