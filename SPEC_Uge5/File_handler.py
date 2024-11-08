@@ -32,7 +32,7 @@ class FileHandler:
             if primary_url:
                 urls.append((primary_url, filename))
             else: 
-                urls.append((secondary_url, filename))
+                urls.append((secondary_url, filename)) 
         
         log_list = []
         with ThreadPoolExecutor(max_workers=WORKERS) as executor:  
