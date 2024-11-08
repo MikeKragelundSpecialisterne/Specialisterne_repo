@@ -26,15 +26,16 @@ pip install -r /path/to/requirements.txt
 
 ## Directory Setup
 
-**Excel File:** Place `GRI_2017_2020.xlsx` in the `out` directory.
 
 **Output Directories:**
 
-- Create a directory named `out` in the project folder.
+- Create a directory named `out` in the project folder. 
 
 - Inside `out`, create a folder named `files` where the downloaded PDFs will be stored.
 
 - The program will also save a log file, `downloaded_files.xlsx`, in the `out` folder.
+
+**Excel File:** Place `GRI_2017_2020.xlsx` in the `out` directory.
 
 ## Usage
 
