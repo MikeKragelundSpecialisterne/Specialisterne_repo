@@ -1,5 +1,7 @@
 SPEC_Uge4/Fitted_data.csv
 SPEC_Uge4/Fitted_data_With_text.csv
 SPEC_Uge4/complaints.csv
-SPEC_Uge4/NLP.py
-SPEC_Uge4/flask_App.py
+SPEC_Uge5/__init__.py
+SPEC_Uge5/__pycache__
+SPEC_Uge5/testThread.py
+*.puml
