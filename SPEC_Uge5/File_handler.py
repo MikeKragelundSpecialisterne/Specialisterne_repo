@@ -3,6 +3,10 @@ import pandas as pd
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os 
 import polars as pl
+
+WORKERS = 10
+FILES = 100
+    
 class FileHandler:
     def __init__(self, file_path_gri, destination_folder, output_folder):
         self.file_path_gri = file_path_gri
@@ -19,7 +23,7 @@ class FileHandler:
         urls = []
         count = 0
         for row in df.rows(named=True):
-            if count == 500:
+            if count == FILES:
                 break
             primary_url = row['Pdf_URL']
             secondary_url = row['Report Html Address']
@@ -31,7 +35,7 @@ class FileHandler:
                 urls.append((secondary_url, filename))
         
         log_list = []
-        with ThreadPoolExecutor(max_workers=10) as executor:  
+        with ThreadPoolExecutor(max_workers=WORKERS) as executor:  
             future_to_url = {executor.submit(self.downloader.download, url, filename): (url, filename) for url, filename in urls}
             
             for future in as_completed(future_to_url):
