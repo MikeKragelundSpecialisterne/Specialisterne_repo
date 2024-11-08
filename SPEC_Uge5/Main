@@ -3,9 +3,9 @@ from Controller import Controller
 
 if __name__ == "__main__":
     # File paths and destination folder need to be updated with actual paths
-    file_path_gri = "../out/GRI_2017_2020.xlsx"
-    destination_folder = "../out/files"
-    output_folder = "../out"
+    file_path_gri = "/out/GRI_2017_2020.xlsx"
+    destination_folder = "/out/files"
+    output_folder = "/out"
 
     controller = Controller(file_path_gri, destination_folder, output_folder)
     controller.start()
