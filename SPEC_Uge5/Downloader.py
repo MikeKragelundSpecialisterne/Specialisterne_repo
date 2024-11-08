@@ -1,6 +1,6 @@
 import os 
 import requests
-
+## Handles individual PDF downloads
 class Downloader:
     def __init__(self, destination_folder):
         self.destination_folder = destination_folder

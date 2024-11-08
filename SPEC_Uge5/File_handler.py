@@ -6,7 +6,7 @@ import polars as pl
 
 WORKERS = 10
 FILES = 100
-    
+    ## Reads URLs from the Excel file, manages the download process, and writes the log of downloaded files.
 class FileHandler:
     def __init__(self, file_path_gri, destination_folder, output_folder):
         self.file_path_gri = file_path_gri

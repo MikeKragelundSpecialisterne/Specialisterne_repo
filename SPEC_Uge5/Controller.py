@@ -1,4 +1,6 @@
 from File_handler import FileHandler
+ 
+## Handles individual PDF downloads
 class Controller:
     def __init__(self, file_path_gri, destination_folder, output_folder):
         self.file_path_gri = file_path_gri
